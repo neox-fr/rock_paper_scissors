@@ -10,7 +10,7 @@ def get_choices(comp):
 def check_win(player, computer, comp):
     print("you chose " + player + ", computer chose " + computer)
     #print(f"you chose {player}, computer chose {computer}")
-    if player is not comp:
+    if player not in comp:
         return "Not valid"
     elif player==computer:
         return "draw"
@@ -34,4 +34,5 @@ def check_win(player, computer, comp):
 
 choices = get_choices(comp)
 result = check_win(choices["player"], choices["computer"], comp)
+
 print(result)
